@@ -1,5 +1,6 @@
 let message = '';
 
+
 function getComputerChoice() {
     let rock = 1;
     let paper = 2;
@@ -26,6 +27,8 @@ function getComputerChoice() {
 
     }
 }
+
+// the second item logged to the console is the compChoice
 
 function playRound(playerSelection, computerSelection) {
 
@@ -65,12 +68,15 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
 
+
+
     let playerScore = 0;
     let computerScore = 0;
 
     let winLoseMessage = '';
 
     for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt('rock, paper or scissors');
         playRound(playerSelection, computerSelection);
         if (message == 'you lose') {
             computerScore += 1;
@@ -92,7 +98,7 @@ function game() {
 
 }
 
-const playerSelection = 'rock';
+//const playerSelection = 'rock';
 const computerSelection = getComputerChoice();
 //console.log(playRound(playerSelection, computerSelection));
 
